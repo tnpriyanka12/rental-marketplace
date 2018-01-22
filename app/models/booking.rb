@@ -14,6 +14,6 @@
 #
 
 class Booking < ApplicationRecord
+  belongs_to :user    , optional: true #guest
   belongs_to :property, optional: true
-  # belongs_to :user    , optional: true
 end
