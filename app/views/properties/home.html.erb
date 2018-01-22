@@ -1,0 +1,25 @@
+<h1>Property#home</h1>
+<p>Find me in app/views/property/home.html.erb</p>
+
+<h1>Displaying list of properties</h1>
+
+<% @properties.each do |property| %>
+  <div class="property_fields"><%= property.address %><br/>
+  <%= image_tag property.image %><br/>
+  Price :                       <%= property.price %><br/>
+  Type of Accomadation :        <%= property.property_type %><br/>
+  Discounts:                    <%= property.discounts %><br/>
+  Discount Amount:              <%= property.discount_amount %><br/>
+  Extended Stay Option:         <%= property.has_extended_stay %><br/>
+  Description:                  <%= property.description %><br/>
+  Beds:       <%= property.number_of_beds %><br/>
+  Baths:      <%= property.number_of_baths %><br/>
+  Parkings:   <%= property.number_of_parkings %><br/>
+  Pets :      <%= property.pets_allowed %><br/>
+  WiFi:       <%= property.wifi_present %><br/>
+  Smoking:    <%= property.smoking_allowed %><br/>
+  Cancellation policy:  <%= property.cancellation_policy %><br/>
+<hr>
+
+</div>
+<% end %>

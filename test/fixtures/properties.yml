@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: properties
+#
+#  id                :integer          not null, primary key
+#  address           :text
+#  city              :string
+#  price             :float
+#  property_type     :string
+#  discounts         :string
+#  boolean           :string
+#  discount_amount   :float
+#  has_extended_stay :boolean
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  city: MyString
+  price: 1.5
+  property_type: MyString
+  discounts: MyString
+  boolean: MyString
+  discount_amount: 1.5
+  has_extended_stay: false
+
+two:
+  address: MyText
+  city: MyString
+  price: 1.5
+  property_type: MyString
+  discounts: MyString
+  boolean: MyString
+  discount_amount: 1.5
+  has_extended_stay: false

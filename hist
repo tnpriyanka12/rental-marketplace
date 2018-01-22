@@ -1,0 +1,500 @@
+  282  ruby nucleotide.rb 
+  283  ruby nucleotide.rb 
+  284  pry
+  285  clear
+  286  ruby nucleotide.rb 
+  287  ruby nucleotide.rb 
+  288  ruby nucleotide.rb 
+  289  ruby nucleotide.rb 
+  290  pwd
+  291  ls
+  292  cd ..
+  293  ls
+  294  cd ..
+  295  ls
+  296  cd classwork/
+  297  ls
+  298  mkdir classes
+  299  cd classes/
+  300  ls
+  301  touch classes.rb
+  302  atom .
+  303  clear
+  304  ls
+  305  ruby classes.rb 
+  306  ruby classes.rb 
+  307  ruby classes.rb 
+  308  ruby classes.rb 
+  309  ruby classes.rb 
+  310  ruby classes.rb 
+  311  ruby classes.rb 
+  312  ruby classes.rb 
+  313  ruby classes.rb 
+  314  ruby classes.rb 
+  315  ruby classes.rb 
+  316  ruby classes.rb 
+  317  ruby classes.rb 
+  318  ruby classes.rb 
+  319  clear
+  320  cd ..
+  321  ls
+  322  mkdir orm-activerecord
+  323  ls sinatra/
+  324  rmdir orm-activerecord/
+  325  cd databases/
+  326  ls
+  327  cp -r animals-sql animals-orm
+  328  ls animals-
+  329  ls animals-orm/
+  330  ls
+  331  cd animals-orm/
+  332  ls
+  333  tree
+  334  clear
+  335  ls
+  336  gem  install active_record
+  337  gem  install activerecord
+  338  atom .
+  339  clear
+  340  ls
+  341  ruby app.rb 
+  342  ruby app.rb 
+  343  ruby app.rb 
+  344  ruby app.rb 
+  345  ruby app.rb 
+  346  ls
+  347  ruby app.rb 
+  348  clear
+  349  ruby app.rb 
+  350  ruby app.rb 
+  351  ruby app.rb 
+  352  clear
+  353  ruby app.rb 
+  354  ruby app.rb 
+  355  ruby app.rb 
+  356  clear
+  357  ruby app.rb 
+  358  ruby app.rb 
+  359  ruby app.rb 
+  360  ruby app.rb 
+  361  ruby app.rb 
+  362  clear
+  363  ls
+  364  sqlite3 animals.db < admirers.sql 
+  365  sqlite3  animals.db 
+  366  sqlite3 animals.db < add_animal_id_to_admirers.sql 
+  367  sqlite3 animals.
+  368  sqlite3 animals.db 
+  369  pry
+  370  rvm -v
+  371  pry
+  372  curl -sSL https://get.rvm.io | bash -s stable
+  373  clear
+  374  pry
+  375  Random.rand(10..20)
+  376  pry
+  377  cd ~/wdi/warmups/
+  378  ls
+  379  mkdir week04
+  380  cd week04/
+  381  ls
+  382  pwd
+  383  touch raindrops.rb
+  384  atom .
+  385  ruby raindrops.rb 
+  386  ruby raindrops.rb 
+  387  ruby raindrops.rb 
+  388  ruby raindrops.rb 
+  389  ruby raindrops.rb 
+  390  cd ~/wdi/classwork/databases/animals-orm/
+  391  ls
+  392  sqlite3 animals.db < admirers.sql 
+  393  sqlite3 animals.db 
+  394  sqlite3 animals.db < admirers.sql 
+  395  sqlite3 animals.db 
+  396  ruby app.rb 
+  397  cd views/
+  398  ls
+  399  cp edit.erb animals_edit.erb 
+  400  cp home.erb animals_home.erb
+  401  cp index.erb animals_index.erb
+  402  cp layout.erb animals_layout.erb
+  403  cp new.erb animals_new.erb
+  404  cp show.erb animals_show.erb
+  405  cp edit.erb admirers_edit.erb
+  406  cp home.erb admirers_home.erb
+  407  cp index.erb admirers_index.erb
+  408  cp layout.erb admirers_layout.erb
+  409  cp new.erb admirers_new.erb
+  410  cp show.erb admirers_show.erb
+  411  ls
+  412  rm edit.erb 
+  413  rm home.erb 
+  414  rm index.erb
+  415  rm layout.erb 
+  416  rm new.erb 
+  417  rm show.erb
+  418  ls
+  419  mv admirers_layout.erb layout.erb
+  420  rm animals_layout.erb 
+  421  ls
+  422  cd ..
+  423  ls
+  424  ruby app.rb 
+  425  cd ~/wdi/
+  426  ls
+  427  cd homework/priyanka_narasimhan/
+  428  ls
+  429  cd week04/
+  430  ls
+  431  mkdirorm_homework
+  432  mkdir orm_homework
+  433  cd orm_homework/
+  434  ls
+  435  clear
+  436  touch app.rb
+  437  mkdir public views
+  438  mkdir public/css
+  439  touch public/css/style.css
+  440  clear
+  441  ls
+  442  touch famous_paintings.sql
+  443  touch views/layout.erb
+  444  tree
+  445  atom .
+  446  clear
+  447  ls
+  448  mv famous_paintings.sql paintings.sql
+  449  ls
+  450  sqlite3 paintings.db < paintings.sql 
+  451  sqlite3 paintings.db < paintings.sql 
+  452  sqlite3 paintings.db 
+  453  ls
+  454  ruby app.rb 
+  455  ruby app.rb 
+  456  ruby app.rb 
+  457  ruby app.rb 
+  458  clear
+  459  ls
+  460  rm paintings.db 
+  461  sqlite3 paintings.db < paintings.sql ; sqlite3 paintings.db
+  462  ruby app.rb 
+  463  ruby app.rb 
+  464  cd ~/wdi/classwork/
+  465  ls
+  466  cd databases/animals-orm/
+  467  ls
+  468  tree
+  469  clear
+  470  cat animals.sql 
+  471  cat app.rb 
+  472  cat app.rb | head -50
+  473  clear
+  474  ls
+  475  cd ..
+  476  ls
+  477  cd ..
+  478  ls
+  479  cd databases/animals-orm/
+  480  ls
+  481  atom .
+  482  history
+  483  ruby app.rb 
+  484  ruby app.rb 
+  485  ruby app.rb 
+  486  ls
+  487  pwd
+  488  history
+  489  gem  install activerecord
+  490  gem  install activerecord
+  491  ruby app.rb 
+  492  ruby app.rb 
+  493  clear
+  494  ruby app.rb 
+  495  ruby app.rb 
+  496  ruby app.rb 
+  497  ruby app.rb 
+  498  clear
+  499  ls
+  500  history
+  501  cd ~/wdi
+  502  ls
+  503  cd classwork/
+  504  ls
+  505  ls classes/
+  506  cd sinatra/stock_quote/
+  507  ls
+  508  cat app.rb 
+  509  ls
+  510  cat public/css/style.css 
+  511  cat views/
+  512  cat views/*
+  513  cat views/stock_comp_details.erb 
+  514  clear
+  515  cd ..
+  516  cat * | grep parse
+  517  ls
+  518  cat books/
+  519  cat books/*
+  520  cd ~/wdi/week5/planets_db/
+  521  rails c
+  522  atom .
+  523  cd ~/wdi/homework/priyanka_narasimhan/week05/match_maker/
+  524  rails c
+  525  rails c
+  526  cat ../../../../week5/stock_and_books/app/views/stocks/lookup.html.erb 
+  527  cat ../../../../week5/planets_db/app/views/planets/show.html.erb 
+  528  clear
+  529  cd ..
+  530  ls
+  531  cd ..
+  532  ls
+  533  cd ~/wdi/week5/
+  534  ls
+  535  mkdir moma-app
+  536  cd moma-app/
+  537  cd ..
+  538  rm -rf moma-app/
+  539  rails new moma-app --skip-git
+  540  cd moma-app/
+  541  atom .
+  542  bundle
+  543  rails g model Work title:text year:text medium:text style:text image:text  
+  544  rails db:migrate 
+  545  annotate
+  546  annotate
+  547  bundle
+  548  annotate 
+  549  cat app/models/work.rb 
+  550  rails db:migrate:status
+  551  rails s
+  552  rails db:seed
+  553  rails db:seed
+  554  rails s
+  555  clear
+  556  rails g model Artist name:text nationality:text dob:date period:text image:text
+  557  pwd
+  558  ls
+  559  rails db:migrate
+  560  annotate 
+  561  rails db:seed
+  562  rails db:seed
+  563  clear
+  564  rails g migration AddArtistIdToWorks artist_id:integer
+  565  rails db:migrate
+  566  rails db:migrate:status
+  567  rails s
+  568  cd ~/wdi/homework/priyanka_narasimhan/week05/match_maker/
+  569  ls
+  570  rails s
+  571  rails s
+  572  clear
+  573  cd ~/wdi/week5/
+  574  ls
+  575  rails new tunr --skip-git --skip-turbolinks
+  576  cd tunr/
+  577  atom .
+  578  bundle
+  579  clear
+  580  ls
+  581  rails g model Song title:text artist_id:integer album_id:integer 
+  582  rails g model Artist name:text image:text
+  583  rails g model Album title:text  image:text year:text
+  584  cat app/models/application_record.rb 
+  585  cat app/models/*
+  586  rails db:migrate
+  587  annotate
+  588  cd ..
+  589  gem install pg
+  590  source ~/.bash_profile 
+  591  PATH
+  592  echo PATH
+  593  echo $PATH
+  594  postgres 
+  595  gem install pg
+  596  rm -rf tunr/
+  597  rails new tunr --skip-git --skip-turbolinks -d postgresql
+  598  atom .
+  599  cd tunr/
+  600  atom .
+  601  bundle
+  602  history
+  603  rails g model Song title:text artist_id:integer album_id:integer
+  604  kill %1
+  605  history
+  606  ails g model Song title:text artist_id:integer album_id:integer
+  607  rails g model Song title:text artist_id:integer album_id:integer
+  608  kill %1
+  609  spring stop
+  610  clear
+  611  rails g model Song title:text artist_id:integer album_id:integer
+  612  rails g model Artist name:text image:text
+  613  rails g model Album title:text image:text year:text
+  614  rails db:create
+  615  rails db:migrate 
+  616  atom .
+  617  annotate
+  618  annotate
+  619  rails db:seed 
+  620  rails db:seed 
+  621  rails db:seed 
+  622  clear
+  623  rails db:seed
+  624  rails db:seed 
+  625  rails db:seed 
+  626  rails db:seed 
+  627  rails g model Genre name:text
+  628  rails db:migrate
+  629  rails g migration create_genres_songs
+  630  rails g migration create_genres_songs song_id:integer genre_id:integer
+  631  rails db:seed
+  632  rails db:migrate
+  633  rails db:seed
+  634  rails db:seed
+  635  clear
+  636  rails g model Mixtape name:text image:text
+  637  rails g migration create_mixtapes_songs mixtape_id:integer song_id:integer 
+  638  rails db:migrate:status
+  639  rails db:migrate
+  640  rails db:migrate:status
+  641  rails db:seed
+  642  rails db:seed
+  643  rails db:seed
+  644  rails db:seed
+  645  clear
+  646  rails g model User email:text name:text
+  647  rails g migration add_user_id_to_mixtapes user_id:integer 
+  648  cat db/migrate/20180118032750_add_user_id_to_mixtapes.rb
+  649  rails db:migrate
+  650  rails db:seed
+  651  rails db:seed
+  652  rails db:seed
+  653  bundle
+  654  rails g migration add_password_digest_to_users password_digest:text
+  655  rails db:migrate 
+  656  rails db:seed
+  657  rails g controller Session new create destroy 
+  658  rails routes
+  659  rails db:seed
+  660  rails s
+  661  rails g controller Pages home
+  662  rails s
+  663  rails s
+  664  rails s
+  665  rails g migration add_is_admin_to_users is_admin:boolean
+  666  rails db:migrate
+  667  rails s
+  668  cd ~/wdi/week5/stock_and_books/
+  669  atom .
+  670  brew install heroku
+  671  heroku --v
+  672  heroku --version
+  673  heroku login 
+  674  cd ~/wdi/projects/
+  675  ls
+  676  mkdir project1
+  677  cd project1/
+  678  rails new rental_marketplace --skip-turbolinks -d postgresql
+  679  ls
+  680  cd rental_marketplace/
+  681  ls
+  682  atom .
+  683  bundle install 
+  684  atom .
+  685  bundle 
+  686  git add  .
+  687  git commit -m "Initial commit" 
+  688  git status
+  689  git log 
+  690  heroku create rental_marketplace
+  691  heroku create rental-marketplace
+  692  git config --list | grep heroku 
+  693  git push heroku master 
+  694  heroku run rails db:migrate 
+  695  heroku open 
+  696  lolcommits --enable  --delay=2 
+  697  gem install lolcommits
+  698  lolcommits --enable  --delay=2 
+  699  git remote add origin https://github.com/tnpriyanka12/rental-marketplace.git
+  700  git push -u origin master
+  701  cd ..
+  702  cd ..
+  703  cd ..
+  704  ls
+  705  cd priyanka_fun/
+  706  ls
+  707  rails new testdemo --skip-git --skip-turbolinks
+  708  atom .
+  709  cd testdemo/
+  710  atom .
+  711  rails g model User name:text email:text 
+  712  u1 = User.create name:'User1', email: 'email1.com'
+  713  rails db:seed
+  714  rails db:migrate
+  715  rails db:seed
+  716  rails db:seed
+  717  rails g model Rentals ren_id:integer price:integer 
+  718  rails db:seed
+  719  rails db:migrate
+  720  rails g model Rental ren_id:integer price:integer 
+  721  rails db:migrate
+  722  rails g model Booking booking_id:integer 
+  723  rails db:migrate
+  724  atom .
+  725  cat ../../week5/planets_db/app/models/planet.rb 
+  726  cat ../../week5/moma-app/app/models/planet.rb 
+  727  cat ../../week5/moma-app/app/models/artist.rb 
+  728  rails db:migrate
+  729  cat ../../week5/moma-app/db/seeds.rb 
+  730  cd ../../week5/moma-app/
+  731  atom .
+  732  cd -
+  733  ls
+  734  rails db:migrate
+  735  history
+  736  rails db:migrate
+  737  rails db:seeds
+  738  rails seeds.rb
+  739  history
+  740  rails db:seed
+  741  rails db:seed
+  742  rails db:seed
+  743  rails db:seed
+  744  clear
+  745  rails db:seed
+  746  rails db:seed
+  747  clear
+  748  rails db:seed
+  749  cat * | grep 'user_id'
+  750  cat */* | grep 'user_id'
+  751  cat app/*
+  752  cat app/*/*
+  753  cat app/*/* | grep 'user_id'
+  754  cat */*/* | grep 'user_id'
+  755  rails db:seed
+  756  rails db:rollback
+  757  rails db:rollback
+  758  rails db:migrate
+  759  rails db:seed
+  760  rails db:seed
+  761  cd ..
+  762  ls
+  763  cd ../
+  764  ls
+  765  cd projects/project1/
+  766  ls
+  767  cd rental_marketplace/
+  768  ls
+  769  ls
+  770  clear
+  771  rails g model User username:string full_name:string email:string profile_pic:string user_type:string description:string 
+  772  rails g model Property address:text city:string price:float property_type:string discounts: boolean discount_amount:float has_extended_stay:boolean 
+  773  clear
+  774  rails g model Booking date: total_amount:float booking_number:integer check_in:string check_out:string discount_availed:boolean 
+  775  rails db:migrate
+  776  rails db:seed
+  777  clear
+  778  ls
+  779  pwd
+  780  history
+  781  history > hist

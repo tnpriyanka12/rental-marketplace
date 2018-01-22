@@ -56,3 +56,6 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'rails_12factor', group: :production
 gem 'jquery-rails'
+
+# My GEMS
+gem 'faker'
