@@ -23,7 +23,8 @@ class Property < ApplicationRecord
 
 
    has_many :photos
-   
+   has_and_belongs_to_many :tags
+
 end
 
 
@@ -41,7 +42,7 @@ end
 
 # ??
 
-# has many photos , photos belong to a property
+
 # has many reviews , reviews belong to property
 #        a review is connected to user thru the property
 

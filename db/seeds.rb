@@ -61,11 +61,7 @@ user1 = User.create username:Faker::Internet.user_name,
 
 puts "There are #{User.all.length} users"
 
-
-
-
-
-
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 # Property
 Property.destroy_all
@@ -157,6 +153,7 @@ city:Faker::Address.city,
   smoking_allowed: false,
   cancellation_policy: 'will fill later'
 puts "There are #{Property.all.length} Property Listings"
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -171,64 +168,93 @@ b6 = Booking.create date:'1-6-2010', total_amount:Random.rand(1000), booking_num
 puts "There are #{Booking.all.length} bookings"
 
 
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-# photos
+# photoss
+Photo.destroy_all
 
 # Property1
-photo1 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/904404/1fb6a026_original.jpg?aki_policy=x_large'
-photo2 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/907772/24511cf0_original.jpg?aki_policy=x_large'
-photo3 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/904435/50e09289_original.jpg?aki_policy=x_large'
-
-
+ph1 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/904404/1fb6a026_original.jpg?aki_policy=x_large'
+ph2 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/907772/24511cf0_original.jpg?aki_policy=x_large'
+ph3 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/904435/50e09289_original.jpg?aki_policy=x_large'
 # Property 2
-photo4 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/50929719/e3c4d938_original.jpg?aki_policy=x_large'
-photo5 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/53990877/9042de56_original.jpg?aki_policy=x_large'
-photo6 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/53991449/0d3ae165_original.jpg?aki_policy=x_large'
-photo7 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/50927476/5d673121_original.jpg?aki_policy=x_large'
-
-
-
+ph4 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/50929719/e3c4d938_original.jpg?aki_policy=x_large'
+ph5 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/53990877/9042de56_original.jpg?aki_policy=x_large'
+ph6 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/53991449/0d3ae165_original.jpg?aki_policy=x_large'
+ph7 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/50927476/5d673121_original.jpg?aki_policy=x_large'
 # Property 3
-
-photo8 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11341171/d5ca49b5_original.jpg?aki_policy=small'
-photo9 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11341203/b51c32f5_original.jpg?aki_policy=x_large'
-
+ph8 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11341171/d5ca49b5_original.jpg?aki_policy=small'
+ph9 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11341203/b51c32f5_original.jpg?aki_policy=x_large'
 # Property 4
-photo10 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/45366808/42d14fce_original.jpg?aki_policy=x_large'
-photo11 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11250061/4c58d7cd_original.jpg?aki_policy=x_large'
-photo12 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/45371073/a78175b3_original.jpg?aki_policy=x_large'
-
+ph10 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/45366808/42d14fce_original.jpg?aki_policy=x_large'
+ph11 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/11250061/4c58d7cd_original.jpg?aki_policy=x_large'
+ph12 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/45371073/a78175b3_original.jpg?aki_policy=x_large'
 # Property 5
-photo13 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/46c4ae54-f77a-4515-8bfe-8c0abead0be0.jpg?aki_policy=x_large'
-photo14 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/110995700/9c78fd03_original.jpg?aki_policy=x_large'
-photo15 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/110995705/58d7f0c6_original.jpg?aki_policy=x_large'
+ph13 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/46c4ae54-f77a-4515-8bfe-8c0abead0be0.jpg?aki_policy=x_large'
+ph14 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/110995700/9c78fd03_original.jpg?aki_policy=x_large'
+ph15 = Photo.create image_url: 'https://a0.muscache.com/im/pictures/110995705/58d7f0c6_original.jpg?aki_policy=x_large'
+
+puts "There are #{Photo.all.length} Photos"
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Tag.destroy_all
+tag1  = Tag.create name: 'luxury'
+tag2  = Tag.create name: 'holiday'
+tag3  = Tag.create name: 'duplex'
+tag4  = Tag.create name: 'tree-house'
+tag5  = Tag.create name: 'villa'
+tag6  = Tag.create name: 'large'
+tag7  = Tag.create name: 'small'
+tag8  = Tag.create name: 'apartment'
+tag9  = Tag.create name: 'scenic'
+puts "There are #{Tag.all.length} tags"
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-
-
-
+# A user has many properties
 user1.properties << p1 << p2
 user2.properties << p3 << p4 << p5
 user3.properties << p5
 
-
+# User has many bookings
 user4.bookings << b1 << b4
 user5.bookings << b6
 
-
+# Property has many bookings
 p1.bookings << b1 << b3
 p2.bookings << b4 << b6 << b5
 p4.bookings << b2
 
+# Property has many photos
+p1.photos << ph1 << ph2 << ph3
+p2.photos << ph4 << ph5 << ph6 << ph7
+p3.photos << ph8 << ph9
+p4.photos << ph10 << ph11 << ph12
+p5.photos << ph13 << ph14 << ph15
+
+# Many to many association for the properties & tags
+p1.tags << tag1 << tag2
+p2.tags << tag4 << tag6
+tag1.properties << p4 << p2
 
 
 
-p1.photos << photo1 << photo2 << photo3
-p2.photos << photo4 << photo5 << photo6 << photo7
-p3.photos << photo8 << photo9
-p4.photos << photo10 << photo11 << photo12
-p5.photos << photo13 << photo14 << photo15
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # bookings = []
 # 20.times do
