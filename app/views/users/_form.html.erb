@@ -1,0 +1,33 @@
+<!-- t.string "username"
+t.string "full_name"
+t.string "email"
+t.string "profile_pic"
+t.string "user_type"
+t.string "description" -->
+
+<%= form_for @property do |f| %>
+
+<fieldset>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :full_name  %>
+  <%= f.text_field :full_name %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :profile_pic %>
+  <%= f.text_field :profile_pic %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</fieldset>
+
+<%= f.submit %>
+
+
+<% end %>

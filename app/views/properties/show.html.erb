@@ -1,0 +1,55 @@
+<p>showing property details</p>
+
+
+
+<h1> <%=@property.property_type %> at <%=@property.address %></h1>
+  <br/>
+  <%= image_tag @property.image %>
+  <br/>
+  <%= link_to 'Click For More Images', photos_path %>
+  <br/><hr>
+
+  Type of Accomadation: <%= @property.property_type %><br/>
+  Discounts:            <%= @property.discounts %><br/>
+  Discount Amount:      <%= @property.discount_amount %><br/>
+  Extended Stay Option: <%= @property.has_extended_stay %><br/>
+  Description:          <%= @property.description %><br/>
+  Beds:                 <%= @property.number_of_beds %><br/>
+  Baths:                <%= @property.number_of_baths %><br/>
+  Parkings:             <%= @property.number_of_parkings %><br/>
+  Pets :                <%= @property.pets_allowed %><br/>
+  WiFi:                 <%= @property.wifi_present %><br/>
+  Smoking:              <%= @property.smoking_allowed %><br/>
+  Cancellation policy:  <%= @property.cancellation_policy %><br/>
+  <br/><hr>
+  <!-- <%= link_to 'Edit' , edit_property_path( @property )%>
+  <%= link_to 'Delete' , property_path( @property ), method: 'delete'%>
+  <hr><hr><hr> -->
+
+  <%= link_to 'Contact the Owner', @property.user %>
+  <hr>
+
+
+  <p><strong>Tags</strong>:</p>
+  <ul>
+  <% @property.tags.each do |tag| %>
+    <li>
+      <%= link_to tag.name, tag %>
+    </li>
+  <% end %>
+  </ul>
+  <hr>
+
+  <p><strong>Bookings</strong>:</p>
+  <ul>
+  <% @property.bookings.each do |booking| %>
+    <li>
+      Booked from <%= booking.check_in %> to  <%= booking.check_out %>
+    </li>
+  <% end %>
+  </ul>
+
+  <%= link_to 'Make a Booking' , new_property_booking_path(@property) %>
+
+
+  <hr>

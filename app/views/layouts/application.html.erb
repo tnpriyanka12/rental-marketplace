@@ -6,9 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
+  <div class="container">
+    <nav>
+  
+
+    </nav>
     <%= yield %>
+  </div>
   </body>
 </html>

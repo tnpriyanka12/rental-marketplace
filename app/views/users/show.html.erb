@@ -1,0 +1,7 @@
+<p>Showing User details</p>
+
+<%= image_tag @user.profile_pic %>
+<h1> <%=@user.username %></h1>
+FullName: <%=@user.full_name %>
+
+<%= link_to 'Check User Properties', property_path %>
