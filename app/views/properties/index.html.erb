@@ -1,6 +1,6 @@
 
 <h1>Displaying list of properties</h1>
-    <div id="map"></div>
+
 
 <div class="row">
 <% @properties.each do |property| %>
@@ -15,7 +15,10 @@
 <% end %>
 </div>
 
+    <div id="map"></div>
 
+
+    
 <script>
     function initMap() {
       var uluru = {lat: -33.8712475, lng: 151.2045696};

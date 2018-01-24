@@ -17,4 +17,7 @@
 class User < ApplicationRecord
    has_many :properties # owner
    has_many :bookings   # guest/owner
+
+   has_secure_password
+   validates :email, presence: true, uniqueness: true
 end

@@ -18,21 +18,21 @@ User.destroy_all
 
 user1 = User.create username:Faker::Internet.user_name,
  full_name: Faker::Name.name,
- email: Faker::Internet.safe_email,
+ email: 'user1@gmail.com', password: 'marker',
  profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
  user_type: options_user_type.sample,
  description: Faker::Lorem.paragraph(5)
 
  user2 = User.create username:Faker::Internet.user_name,
   full_name: Faker::Name.name,
-  email: Faker::Internet.safe_email,
+  email: 'user2@gmail.com', password: 'marker',
   profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
   user_type: options_user_type.sample,
   description: Faker::Lorem.paragraph(5)
 
   user3 = User.create username:Faker::Internet.user_name,
    full_name: Faker::Name.name,
-   email: Faker::Internet.safe_email,
+   email: 'user3@gmail.com', password: 'marker',
    profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
    user_type: options_user_type.sample,
    description: Faker::Lorem.paragraph(5)
@@ -40,21 +40,21 @@ user1 = User.create username:Faker::Internet.user_name,
 
    user4 = User.create username:Faker::Internet.user_name,
     full_name: Faker::Name.name,
-    email: Faker::Internet.safe_email,
+    email: 'user4@gmail.com', password: 'marker',
     profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
     user_type: 'Guest',  #options_user_type.sample,
     description: Faker::Lorem.paragraph(5)
 
     user5 = User.create username:Faker::Internet.user_name,
      full_name: Faker::Name.name,
-     email: Faker::Internet.safe_email,
+     email: 'user5@gmail.com', password: 'marker',
      profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
      user_type: 'Guest',  #options_user_type.sample,
      description: Faker::Lorem.paragraph(5)
 
      user6 = User.create username:Faker::Internet.user_name,
       full_name: Faker::Name.name,
-      email: Faker::Internet.safe_email,
+      email: 'user6@gmail.com', password: 'marker',
       profile_pic:'https://i.pinimg.com/236x/ca/fd/4a/cafd4a9ee00e9af923c4bcdb604a2fdd--girl-sketch-face-sketch.jpg',
       user_type: 'Registered',  #options_user_type.sample,
       description: Faker::Lorem.paragraph(5)

@@ -1,11 +1,5 @@
-<!-- t.string "username"
-t.string "full_name"
-t.string "email"
-t.string "profile_pic"
-t.string "user_type"
-t.string "description" -->
 
-<%= form_for @property do |f| %>
+<%= form_for @user do |f| %>
 
 <fieldset>
   <%= f.label :username %>
@@ -18,14 +12,22 @@ t.string "description" -->
 </fieldset>
 
 <fieldset>
-  <%= f.label :profile_pic %>
-  <%= f.text_field :profile_pic %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
 </fieldset>
 
 <fieldset>
   <%= f.label :description %>
   <%= f.text_field :description %>
 </fieldset>
+
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+<br>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %>
+
 
 <%= f.submit %>
 

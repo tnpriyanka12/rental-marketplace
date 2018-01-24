@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-
-    <style>
+  <style>
    #map {
-    height: 400px;
-    width: 100%;
+     height: 400px;
+     width: 400px;
      }
-    </style>
+  </style>
 
 
-    <title>RentalMarketplace</title>
-
+  <title>RentalMarketplace</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
-
-
   </head>
 
   <body>
   <div class="container">
     <nav>
+      <li><%= link_to "Home"   , root_path, class: 'btn btn-primary' %></li>
 
+      <% if @current_user.present? %>
+        <li><%= link_to "Logout", login_path, class: 'btn btn-primary', method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Login", login_path, class: 'btn btn-primary' %></li>
+        <li><%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %></li>
+      <% end %>
 
     </nav>
-  
+
+    <div class="lead">
+
     <%= yield %>
+  </div>
+
   </div>
   </body>
 </html>
