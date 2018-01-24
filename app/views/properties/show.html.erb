@@ -45,6 +45,7 @@
   <% @property.bookings.each do |booking| %>
     <li>
       Booked from <%= booking.check_in %> to  <%= booking.check_out %>
+      <%= link_to 'Delete Booking' , property_booking_path(@property, booking), method: 'delete' %>
     </li>
   <% end %>
   </ul>

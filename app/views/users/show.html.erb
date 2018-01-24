@@ -3,5 +3,11 @@
 <%= image_tag @user.profile_pic %>
 <h1> <%=@user.username %></h1>
 FullName: <%=@user.full_name %>
+<br>
+Email   :<%= @user.email %>
 
+<a class="btn btn-primary" href= "mailto:<%= @user.email %>?bcc=email_2@mywebsite.com?" role="button">
+Send Email Now</a>
+
+<br>
 <%= link_to 'Check User Properties', property_path %>

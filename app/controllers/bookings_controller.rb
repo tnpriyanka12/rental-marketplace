@@ -10,19 +10,51 @@ class BookingsController < ApplicationController
 
   def create
     property =  Property.find params[:property_id]
-    property.bookings.create booking_params
-    redirect_to property
+    prev_bookings = property.bookings
 
-    
-    # @bookings = Booking.all
-    # # Check for bookings valid or not
-    # @bookings.each do |b|
-    #   puts "#{b}"
-    # end
-    # binding.pry
-  end
+  if Date.parse(booking_params[:check_out]) < Date.parse(booking_params[:check_in])
+      # Error> check_out date cant be before check_in date
+       flash[:error] = "check_out date cant be before check_in date"
+       redirect_to new_property_booking_path
+
+  else
+    # # Current checkin and checkout dates
+    curr_checkin_date  = Date.parse(booking_params[:check_in])
+    curr_checkout_date = Date.parse(booking_params[:check_out])
+
+    curr_booking_arr = (curr_checkin_date..curr_checkout_date).to_a
+
+    # Previous checkin and checkout dates
+    prev_bookings.each do |cb|
+      prev_checkin_date  = Date.parse(cb[:check_in])
+      prev_checkout_date = Date.parse(cb[:check_out])
+      prev_booking_arr = (prev_checkin_date..prev_checkout_date).to_a
+
+
+      if (curr_booking_arr & prev_booking_arr).length == 0
+        # raise 'hell'
+        # valid bookings - create the property
+        property.bookings.create booking_params
+        redirect_to property_path property and return
+      else
+        # error -> Dates co-incides with previous booking
+        flash[:error] = "Dates co-incides with previous booking"
+        redirect_to new_property_booking_path and return
+      end
+    end # .each
+
+
+
+  end # if - else
+  end #create
+
+
 
   def destroy
+    property =  Property.find params[:property_id]
+    booking = Booking.find params[:id]
+    booking.destroy
+    redirect_to property
   end
 
   def show

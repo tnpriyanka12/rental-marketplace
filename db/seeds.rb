@@ -65,7 +65,8 @@ puts "There are #{User.all.length} users"
 
 # Property
 Property.destroy_all
-p1 = Property.create address: Faker::Address.street_address,
+# p1 = Property.create address: Faker::Address.street_address,
+p1 = Property.create address: '1 Market St, Sydney, 2000',
 city:Faker::Address.city,
 price:Faker::Commerce.price(5000),
 property_type: options_property_type.sample,

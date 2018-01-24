@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122115902) do
+ActiveRecord::Schema.define(version: 20180124001903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20180122115902) do
     t.boolean "wifi_present"
     t.boolean "smoking_allowed"
     t.text "cancellation_policy"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "properties_tags", id: false, force: :cascade do |t|

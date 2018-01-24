@@ -1,5 +1,6 @@
 
 <h1>Displaying list of properties</h1>
+    <div id="map"></div>
 
 <div class="row">
 <% @properties.each do |property| %>
@@ -13,3 +14,23 @@
   </div>
 <% end %>
 </div>
+
+
+<script>
+    function initMap() {
+      var uluru = {lat: -33.8712475, lng: 151.2045696};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 5,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdhXgHiC8wT39IZTNaPCDk0oA8gDP3Res&callback=initMap"
+type="text/javascript"></script>
