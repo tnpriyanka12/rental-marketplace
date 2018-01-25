@@ -1,18 +1,18 @@
-<h1>Property#home</h1>
+<h3>Welcome to PrisMs</h3>
 
 <%= link_to 'Click here to Check All Properties', properties_path %>
 <br>
-<div class="row">
 <% @properties.each do |property| %>
-<div class="col-md-2">
+<div class="img-responsive">
+
     <% if property.id % 2 == 0 %>
     <%= link_to property.address, property %>
     <br/>
     <%= image_tag property.image %>
     <br/>
-    Price : <%= property.price %><br/>
+    Price : <%= number_to_currency(property.price) %><br/>
     <hr>
     <% end %>
   </div>
+
 <% end %>
-</div>

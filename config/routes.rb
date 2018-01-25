@@ -12,9 +12,11 @@ Rails.application.routes.draw do
 
   resources :properties do
     resources :bookings
+    resources :photos
+    resources :tags
+
   end
 
-  resources :photos
-  resources :tags
+  # resources :photos
   resources :users
 end

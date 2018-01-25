@@ -1,13 +1,21 @@
-<p>showing property details</p>
-
 
 
 <h1> <%=@property.property_type %> at <%=@property.address %></h1>
   <br/>
   <%= image_tag @property.image %>
+
   <br/>
-  <%= link_to 'Click For More Images', photos_path %>
+    <a href="" id="showPhotos">More Photos</a>
+    <br>
+    <div id="photos">
+    <% @property.photos.each do |p| %>
+    <%= image_tag p.image_url %><br>
+    <% end %>
+    </div>
+
   <br/><hr>
+
+
 
   Type of Accomadation: <%= @property.property_type %><br/>
   Discounts:            <%= @property.discounts %><br/>
@@ -22,19 +30,23 @@
   Smoking:              <%= @property.smoking_allowed %><br/>
   Cancellation policy:  <%= @property.cancellation_policy %><br/>
   <br/><hr>
-  <!-- <%= link_to 'Edit' , edit_property_path( @property )%>
+  <%  if(@current_user == @property.user) %>
+  <small> Your Property </small><br>
+  <%= link_to 'Edit' , edit_property_path( @property )%> |
   <%= link_to 'Delete' , property_path( @property ), method: 'delete'%>
-  <hr><hr><hr> -->
+  <hr><hr><hr>
+  <% else %>
 
   <%= link_to 'Contact the Owner', @property.user %>
   <hr>
+  <% end %>
 
 
   <p><strong>Tags</strong>:</p>
   <ul>
   <% @property.tags.each do |tag| %>
     <li>
-      <%= link_to tag.name, tag %>
+      <%= link_to tag.name, property_tag_path(@property) %>
     </li>
   <% end %>
   </ul>
@@ -54,3 +66,7 @@
 
 
   <hr>
+
+
+
+  <!-- <%= link_to 'See More Photos', property_photos_path(@property) %> -->

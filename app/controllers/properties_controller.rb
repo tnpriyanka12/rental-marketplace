@@ -7,10 +7,14 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
+    # binding.pry
   end
 
   def show
     @property = Property.find params[:id]
+    @photos   = @property.photos
+    # raise 'hell'
+
   end
 
   def new
@@ -18,7 +22,7 @@ class PropertiesController < ApplicationController
   end
 
   def edit
-    @property = Property.new
+    @property = Property.find params[:id]
   end
 
   def update

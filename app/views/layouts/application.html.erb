@@ -19,9 +19,11 @@
 
   <body>
   <div class="container">
+    <% if @current_user.present? %>
+    <h1>Welcome, <%= @current_user.full_name %></h1>
+    <% end %>
     <nav>
       <li><%= link_to "Home"   , root_path, class: 'btn btn-primary' %></li>
-
       <% if @current_user.present? %>
         <li><%= link_to "Logout", login_path, class: 'btn btn-primary', method: :delete %></li>
       <% else %>
