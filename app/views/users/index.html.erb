@@ -1,12 +1,11 @@
 
 <h1>Displaying list of Users</h1>
-
 <div class="row">
 <% @user.each do |user| %>
-  <div class="col-md-4">
+  <div class="col-md-10">
     <%= link_to user.full_name , user%>
     <br/>
-    <%= image_tag user.profile_pic %>
+    <%= cl_image_tag user.profile_pic %>
     <hr>
   </div>
 <% end %>

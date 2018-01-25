@@ -1,7 +1,7 @@
 <p>User details</p>
 
 <% if @user.profile_pic.present? %>
-  <%= image_tag @user.profile_pic %>
+  <%= cl_image_tag @user.profile_pic %>
 <% end %>
 <h1> <%=@user.username %></h1>
 FullName: <%=@user.full_name %>
