@@ -1,18 +1,25 @@
+
+<body class="homepage">
 <h3>Welcome to PrisMs</h3>
 
 <%= link_to 'Click here to Check All Properties', properties_path %>
 <br>
-<% @properties.each do |property| %>
+<!-- <% @properties.each do |property| %>
 <div class="img-responsive">
 
     <% if property.id % 2 == 0 %>
     <%= link_to property.address, property %>
     <br/>
-    <%= image_tag property.image %>
+    <% if property.image.present? %>
+    <%= cl_image_tag property.image %>
+    <% end %>
     <br/>
     Price : <%= number_to_currency(property.price) %><br/>
     <hr>
     <% end %>
   </div>
 
-<% end %>
+<% end %> -->
+
+
+</body>

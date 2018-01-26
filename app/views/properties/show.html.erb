@@ -2,33 +2,42 @@
 
 <h1> <%=@property.property_type %> at <%=@property.address %></h1>
   <br/>
-  <%= image_tag @property.image %>
-
-  <br/>
-    <a href="" id="showPhotos">More Photos</a>
-    <br>
-    <div id="photos">
-    <% @property.photos.each do |p| %>
-    <%= image_tag p.image_url %><br>
-    <% end %>
-    </div>
+  <%= cl_image_tag @property.image %>
 
   <br/><hr>
+  <p><strong>More Pics</strong>:</p>
+      <%= link_to 'More pics', property_photos_path(@property) %>
+  <hr>
+
+
+<table class="table table-striped">
+<tr>
+  <td><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+  Type : <%= @property.property_type %></td>
+  <td><i class="fa fa-car" aria-hidden="true"></i>
+  Parkings:             <%= @property.number_of_parkings %></td>
+  <td><i class="fa fa-bath" aria-hidden="true"></i>
+  Baths:                <%= @property.number_of_baths %></td>
+</tr>
+<tr>
+  <td><span class="glyphicon glyphicon-bed" aria-hidden="true"></span>
+  Beds:                 <%= @property.number_of_beds %></td>
+  <td><i class="fa fa-github-alt" aria-hidden="true"></i>
+  Pets :                <%= @property.pets_allowed %></td>
+  <td><i class="fa fa-wifi" aria-hidden="true"></i>
+  WiFi:                 <%= @property.wifi_present %></td>
+</tr>
+<tr>
+  <td><span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+  Smoking:              <%= @property.smoking_allowed %></td>
+  <td></td>
+  <td></td>
+</tr>
+</table>
 
 
 
-  Type of Accomadation: <%= @property.property_type %><br/>
-  Discounts:            <%= @property.discounts %><br/>
-  Discount Amount:      <%= @property.discount_amount %><br/>
-  Extended Stay Option: <%= @property.has_extended_stay %><br/>
   Description:          <%= @property.description %><br/>
-  Beds:                 <%= @property.number_of_beds %><br/>
-  Baths:                <%= @property.number_of_baths %><br/>
-  Parkings:             <%= @property.number_of_parkings %><br/>
-  Pets :                <%= @property.pets_allowed %><br/>
-  WiFi:                 <%= @property.wifi_present %><br/>
-  Smoking:              <%= @property.smoking_allowed %><br/>
-  Cancellation policy:  <%= @property.cancellation_policy %><br/>
   <br/><hr>
   <%  if(@current_user == @property.user) %>
   <small> Your Property </small><br>
@@ -56,17 +65,13 @@
   <ul>
   <% @property.bookings.each do |booking| %>
     <li>
-      Booked from <%= booking.check_in %> to  <%= booking.check_out %>
+      Booked from <%= Date.parse(booking.check_in) %> to  <%= Date.parse(booking.check_out) %>
       <%= link_to 'Delete Booking' , property_booking_path(@property, booking), method: 'delete' %>
     </li>
   <% end %>
   </ul>
 
   <%= link_to 'Make a Booking' , new_property_booking_path(@property) %>
-
-
   <hr>
-
-
 
   <!-- <%= link_to 'See More Photos', property_photos_path(@property) %> -->

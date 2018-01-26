@@ -1,2 +1,22 @@
 
-<h1> photos index </h1>
+<h1> More pics... </h1>
+
+
+
+<% if(@current_user == @property.user) %>
+<%= link_to 'Add an image', new_property_photo_path %>
+<% end %>
+<hr>
+<%= link_to 'Back to Property', @property %>
+<hr>
+
+
+<div class="row">
+<% @photos.each do |p| %>
+    <%= image_tag p.image_url %><br><br>
+    <br>
+    <% if(@current_user == @property.user) %>
+        <p><%= link_to 'Delete' , property_photo_path( @property , p), method: 'delete'%></p>
+    <% end %>
+    <% end %>
+  </div>

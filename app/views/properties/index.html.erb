@@ -7,7 +7,7 @@
   <div class="col-md-4">
     <%= link_to property.address, property %>
     <br/>
-    <%= image_tag property.image %>
+    <%= cl_image_tag property.image %>
     <br/>
     Price : <%= property.price %><br/>
     <hr>
@@ -18,7 +18,7 @@
     <div id="map"></div>
 
 
-    
+
 <script>
     function initMap() {
       var uluru = {lat: -33.8712475, lng: 151.2045696};

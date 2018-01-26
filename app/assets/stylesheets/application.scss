@@ -18,6 +18,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+html, body {
+  font-family: 'Supermercado One', cursive;
+}
+a{
+    // color: rgba(255,90,95,1)
+}
+
+
+body {
+  // background-image: url('wall_paper.jpg');
+  // background-repeat: no-repeat;
+  background-size: cover;
+
+  filter: alpha(opacity=50);
+}
+.homepage {
+  background-image: url('wall_paper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 img {
   max-width: 300px;
   max-height: 200px;

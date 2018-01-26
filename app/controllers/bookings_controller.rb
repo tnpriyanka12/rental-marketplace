@@ -22,7 +22,11 @@ class BookingsController < ApplicationController
     curr_checkout_date = Date.parse(booking_params[:check_out])
 
     curr_booking_arr = (curr_checkin_date..curr_checkout_date).to_a
+    if(prev_bookings.length == 0)
+      property.bookings.create booking_params
+      redirect_to property_path property and return
 
+    else
     # Previous checkin and checkout dates
     prev_bookings.each do |cb|
       prev_checkin_date  = Date.parse(cb[:check_in])
@@ -31,16 +35,19 @@ class BookingsController < ApplicationController
 
       # check if previous bookings' dates have common dates with previous bookings
       if (curr_booking_arr & prev_booking_arr).length == 0
+
       # raise 'hell'
       # valid bookings - create the property
       property.bookings.create booking_params
       redirect_to property_path property and return
       else
+
       # error -> Dates co-incides with previous booking
       flash[:error] = "Dates co-incides with previous booking"
       redirect_to new_property_booking_path and return
       end
     end # .each
+    end
   end # if - else
 
   end #create

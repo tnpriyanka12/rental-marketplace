@@ -64,3 +64,5 @@ gem 'faker'
 gem 'cloudinary'
 
 gem 'geocoder'
+
+gem 'font-awesome-sass', '~> 4.7.0'

@@ -1,4 +1,4 @@
-<p>User details</p>
+<h2>User details</h2>
 
 <% if @user.profile_pic.present? %>
   <%= cl_image_tag @user.profile_pic %>
@@ -8,8 +8,19 @@ FullName: <%=@user.full_name %>
 <br>
 Email   :<%= @user.email %>
 
-<a class="btn btn-primary" href= "mailto:<%= @user.email %>?bcc=email_2@mywebsite.com?" role="button">
+<a class="btn btn-default" href= "mailto:<%= @user.email %>?bcc=email_2@mywebsite.com?" role="button">
 Send Email Now</a>
+<br>
+<!-- <%= link_to 'Properties', property_path %> -->
 
 <br>
-<%= link_to 'Check User Properties', property_path %>
+<% if @user.properties.length == 0 %>
+  <p> You currently do not own any properties</p>
+<% else %>
+<p> You current properties</p>
+<ul>
+<% @user.properties.each do |p| %>
+<li><%= p.address %> | <%= link_to 'Go to Property', p %></li>
+<% end %>
+</ul>
+<% end %>

@@ -1,0 +1,9 @@
+
+<%= form_for [@property, @photo] , html: {multipart: true} do |f| %>
+<fieldset>
+  <%= f.label :image_url %>
+  <%= f.cl_image_upload :image_url %>
+</fieldset>
+
+<%= f.submit %>
+<% end %>
