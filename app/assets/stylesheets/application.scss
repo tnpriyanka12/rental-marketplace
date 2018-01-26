@@ -33,9 +33,9 @@ body {
   // background-image: url('wall_paper.jpg');
   // background-repeat: no-repeat;
   background-size: cover;
-
   filter: alpha(opacity=50);
 }
+
 .homepage {
   background-image: url('wall_paper.jpg');
   background-repeat: no-repeat;
@@ -71,4 +71,12 @@ nav {
 .explore {
   max-width: 100%;
   // max-height: 20%;
+}
+
+
+.logo{
+  position: relative;
+  top: 0px;
+  font-size: 70px;
+  float: right;
 }

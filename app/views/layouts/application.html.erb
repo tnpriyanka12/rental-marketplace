@@ -19,9 +19,10 @@
 
   <body>
   <div class="container">
-    <% if @current_user.present? %>
-    <h1>Welcome, <%= @current_user.full_name %></h1>
-    <% end %>
+
+    <div class="logo">
+      Happy Homes
+    </div><br>
     <nav>
       <li><%= link_to "Home"   , root_path, class: 'btn btn-primary' %></li>
       <% if @current_user.present? %>

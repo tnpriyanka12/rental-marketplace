@@ -10,8 +10,8 @@
 Other homes with tags <strong><%= t.name %></strong>:
   <br>
   <% t.properties.each do |p| %>
-      <%=     p.address  %><br>
-  <%= image_tag p.image %>
+      <%=   link_to  p.address  , p%><br>
+  <%= cl_image_tag p.image %>
 <br>
 <% end %>
 
