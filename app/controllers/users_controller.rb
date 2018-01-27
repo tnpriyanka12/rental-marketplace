@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   end
 
   def create
-
     user = User.new(user_params)
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
@@ -17,8 +16,7 @@ class UsersController < ApplicationController
     end
     user.save
     redirect_to user
-
-
+    
     # user = User.create user_params
     # if user.persisted?
     #   # user successfully created, redirect to profile page for this user

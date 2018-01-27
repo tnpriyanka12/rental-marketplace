@@ -2,6 +2,12 @@ class BookingsController < ApplicationController
   def new
     @property = Property.find params[:property_id]
     @booking = Booking.new
+      if @current_user.present?
+        raise 'hell'
+      else
+        flash[:error] = "Please Login to make a booking"
+        redirect_to login_path and return
+      end # if user not logged in
   end
 
   def index
@@ -11,6 +17,8 @@ class BookingsController < ApplicationController
   def create
   property =  Property.find params[:property_id]
   prev_bookings = property.bookings
+  # Check if user is logged in
+
 
   if Date.parse(booking_params[:check_out]) < Date.parse(booking_params[:check_in])
     # Error> check_out date cant be before check_in date
@@ -49,6 +57,9 @@ class BookingsController < ApplicationController
     end # .each
     end
   end # if - else
+
+
+
 
   end #create
 

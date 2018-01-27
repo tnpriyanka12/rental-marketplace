@@ -53,10 +53,11 @@ nav li {
 }
 
 nav {
-  padding-top: 20px;
-  height: 40px;
-  // background-color: #437AB2;
+  padding-top: 10px;
+  height: 100px;
 }
+
+
 
 #photos{
   display: inline-block;
@@ -75,8 +76,41 @@ nav {
 
 
 .logo{
+  font-family: 'Orbitron', sans-serif;
+  color: #437AB2;
   position: relative;
-  top: 0px;
-  font-size: 70px;
+  top: 15px;
+  font-size: 30px;
   float: right;
+
 }
+
+.small{
+  font-size: 20px;
+
+}
+
+
+.triangle {
+    position: relative;
+    top: -20px; left: -280px;
+    float: right;
+    width: 0;
+    height: 0;
+    border: solid 15px;
+    border-radius: 5px;
+    border-color: transparent transparent #437AB2 transparent;
+}
+
+
+.two {
+    position: relative;
+    top: -20px; left: -133px;
+  }
+
+// nav>ul {
+// border: 2px solid;
+// border-radius: 25px;
+// border-color:  #437AB2;
+//
+// }
