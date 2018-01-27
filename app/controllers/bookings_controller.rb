@@ -2,9 +2,7 @@ class BookingsController < ApplicationController
   def new
     @property = Property.find params[:property_id]
     @booking = Booking.new
-      if @current_user.present?
-        raise 'hell'
-      else
+      if !(@current_user.present?)
         flash[:error] = "Please Login to make a booking"
         redirect_to login_path and return
       end # if user not logged in
@@ -31,7 +29,8 @@ class BookingsController < ApplicationController
 
     curr_booking_arr = (curr_checkin_date..curr_checkout_date).to_a
     if(prev_bookings.length == 0)
-      property.bookings.create booking_params
+      b = property.bookings.create booking_params
+      @current_user.bookings << b
       redirect_to property_path property and return
 
     else
@@ -46,7 +45,8 @@ class BookingsController < ApplicationController
 
       # raise 'hell'
       # valid bookings - create the property
-      property.bookings.create booking_params
+      b = property.bookings.create booking_params
+      @current_user.bookings << b
       redirect_to property_path property and return
       else
 
@@ -66,10 +66,23 @@ class BookingsController < ApplicationController
 
 
   def destroy
-    property =  Property.find params[:property_id]
-    booking = Booking.find params[:id]
-    booking.destroy
-    redirect_to property
+
+    if !(@current_user.present?)
+      flash[:error] = "Please Login to make/delet this booking"
+      redirect_to login_path and return
+    end
+
+    booking   = Booking.find params[:id]
+    if @current_user == booking.user
+      property =  Property.find params[:property_id]
+      booking = Booking.find params[:id]
+      booking.destroy
+      redirect_to property
+    else
+      flash[:error] = "Please Login to make/delet this booking"
+      redirect_to login_path and return
+    end
+
   end
 
   def show

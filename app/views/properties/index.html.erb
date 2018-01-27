@@ -15,25 +15,29 @@
 <% end %>
 </div>
 
+<!-- MAPS -->
     <div id="map"></div>
 
 
 
 <script>
-    function initMap() {
-      var uluru = {lat: -33.8712475, lng: 151.2045696};
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 5,
-        center: uluru
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
-    }
+function initMap() {
+  var myLatLng = {lat: -25.363, lng: 131.044};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Center!'
+  });
+}
   </script>
 
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdhXgHiC8wT39IZTNaPCDk0oA8gDP3Res&callback=initMap"
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB1gVQ_xqsh5cgL2e9KF0N_aCuRyha0pQ&callback=initMap"
 type="text/javascript"></script>
