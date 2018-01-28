@@ -23,7 +23,7 @@
       Happy Homes<sup class="small">&reg;</sup>
        <div class="triangle"></div> <div class="triangle two"></div>
        <br>
-       <li><%= link_to "Host Property", new_property_path, class: 'btn btn-info btn-lg' %></li>
+       <li><%= link_to "Host Your Property", new_property_path, class: 'btn btn-info btn-lg' %></li>
 
     </div><br>
       <li><%= link_to "Home"   , root_path, class: 'btn btn-primary' %></li>
@@ -41,8 +41,8 @@
       </ul>
     </nav>
   <% if @current_user.present? %>
-    <h3> Welcome, <%= @current_user.full_name %> </h3>
-<% end %>
+    <h4> Welcome, <%= @current_user.full_name %> </h4>
+  <% end %>
     <%= yield %>
   </div>
 

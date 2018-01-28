@@ -42,16 +42,11 @@ a{
 }
 
 
-body {
-  // background-image: url('wall_paper.jpg');
-  // background-repeat: no-repeat;
-  background-size: cover;
-  filter: alpha(opacity=50);
-}
-
 .homepage {
-  background-image: url('wall_paper.jpg');
-  background-repeat: no-repeat;
+  background: url('wall_paper.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -64,13 +59,6 @@ img {
 nav li {
     display: inline;
 }
-
-nav {
-  padding-top: 10px;
-  height: 100px;
-}
-
-
 
 #photos{
   display: inline-block;
@@ -117,7 +105,7 @@ nav {
 
 .triangle {
     position: relative;
-    top: -20px; left: -280px;
+    top: -20px; left: -286px;
     float: right;
     width: 0;
     height: 0;
@@ -129,7 +117,7 @@ nav {
 
 .two {
     position: relative;
-    top: -20px; left: -133px;
+    top: -20px; left: -142px;
   }
 
 // nav>ul {

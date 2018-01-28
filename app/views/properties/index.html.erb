@@ -48,7 +48,7 @@ var infowindow;
 
 function initialize() {
   var prop = <%= @properties.to_json.html_safe %>;
-  
+
   var pyrmont = new google.maps.LatLng( prop[0].latitude, prop[0].longitude );
 
   map = new google.maps.Map(document.getElementById('map'), {
