@@ -83,7 +83,7 @@ wifi_present: true,
 smoking_allowed: false,
 cancellation_policy: 'will fill later'
 
-p2 = Property.create address: Faker::Address.street_address,
+p2 = Property.create address: '10 Market Street, Sydney, 2000',
 city:Faker::Address.city,
  price:Faker::Commerce.price(5000),
   property_type: options_property_type.sample,
@@ -101,7 +101,7 @@ smoking_allowed: false,
 cancellation_policy: 'will fill later'
 
 
-p3 = Property.create address: Faker::Address.street_address,
+p3 = Property.create address: '100 High Street, North Sydney, NSW, 2060',
 city:Faker::Address.city,
  price:Faker::Commerce.price(5000),
   property_type: options_property_type.sample,
@@ -119,7 +119,7 @@ smoking_allowed: false,
 cancellation_policy: 'will fill later'
 
 
-p4 = Property.create address: Faker::Address.street_address,
+p4 = Property.create address: '45 Eglington Street, Lidcombe, NSW, 2141',
 city:Faker::Address.city,
  price:Faker::Commerce.price(5000),
   property_type: options_property_type.sample,
@@ -137,7 +137,7 @@ smoking_allowed: false,
 cancellation_policy: 'will fill later'
 
 
-p5 = Property.create address: Faker::Address.street_address,
+p5 = Property.create address: '10 Clarence Street, Lidcombe, NSW, 2141',
 city:Faker::Address.city,
  price:Faker::Commerce.price(5000),
   property_type: options_property_type.sample,

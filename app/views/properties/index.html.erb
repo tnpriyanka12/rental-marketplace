@@ -19,25 +19,67 @@
     <div id="map"></div>
 
 
-
 <script>
 function initMap() {
-  var myLatLng = {lat: -25.363, lng: 131.044};
 
+  var prop = <%= @properties.to_json.html_safe %>;
+
+  var myLatLng = {lat: prop[0].latitude, lng: prop[0].longitude };
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
+    zoom: 10,
     center: myLatLng
   });
 
-  var marker = new google.maps.Marker({
+
+  for(let i=0; i< prop.length; i++) {
+   var myLatLng = {lat: prop[i].latitude, lng: prop[i].longitude };
+   var marker = new google.maps.Marker({
     position: myLatLng,
     map: map,
-    title: 'Center!'
+    title: 'locations'
   });
+  }
+}
+
+
+var map;
+var service;
+var infowindow;
+
+function initialize() {
+  var prop = <%= @properties.to_json.html_safe %>;
+  
+  var pyrmont = new google.maps.LatLng( prop[0].latitude, prop[0].longitude );
+
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+    });
+
+  var request = {
+    location: pyrmont,
+    radius: '500',
+    type: ['restaurant']
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      createMarker(results[i]);
+    }
+  }
 }
   </script>
 
 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB1gVQ_xqsh5cgL2e9KF0N_aCuRyha0pQ&callback=initMap"
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB1gVQ_xqsh5cgL2e9KF0N_aCuRyha0pQ&callback=initialize"
+
+
 type="text/javascript"></script>

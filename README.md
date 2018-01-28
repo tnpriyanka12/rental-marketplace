@@ -9,7 +9,13 @@ Things you may want to cover:
 
 * Live Site Address -  https://rental-marketplace.herokuapp.com/ /
 
-* "Happy Homes" is a website for finding rentals all over Australia. You can sign up if you are a new user and login directly if you are an already existing user. Paypal payment coming soon.
+* "Happy Homes" is a website for finding rentals all over Australia. You can sign up if you are a new user and login directly if you are an already existing user. Paypal payment options coming soon.
+Very user-friendly website .
+Provides links to every page.
+You can create a booking only if logged in.
+You can delete only your booking.
+Page redirects to login page if you try to delete someone other users' booking.
+
 
 Other Gems used
 -----------------
@@ -26,10 +32,11 @@ password : marker
 
 Wishlist
 ----------------
--Want to make it live and include paypal and more features for maps
--Want to create a minimalist & better looking website
--
-
+-make it live and include paypal and more features for maps
+-create a minimalist & better looking website
+-More interactive map features
+-Favicon
 
 Bugs
 ----------------
+Maps are not properly done yet!

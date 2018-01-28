@@ -21,16 +21,21 @@ class PropertiesController < ApplicationController
 
 
   def create
-    property = Property.new(property_params)
+    if @current_user.present?
+      property = Property.create property_params
+
     if params[:file].present?
       req = Cloudinary::Uploader.upload(params[:file])
-      property.image_url = req["public_id"]
+      property.image = req["public_id"]
     end
     property.save
-
-
-    Property.create property_params
+    @current_user.properties << property
     redirect_to properties_path
+    else
+      flash[:error] = "You must be logged in to complete action"
+      redirect_to login_path
+    end
+
   end
 
   def edit
@@ -58,7 +63,7 @@ class PropertiesController < ApplicationController
 
   private
    def property_params
-     params.require(:property).permit(:address, :city, :price, :property_type, :image, :description )
+     params.require(:property).permit(:address, :city, :price, :property_type, :image, :description, :number_of_beds, :number_of_baths, :number_of_parkings, :pets_allowed, :smoking_allowed, :wifi_present, :cancellation_policy )
    end
 
 

@@ -24,6 +24,9 @@
 html, body {
   font-family: 'Supermercado One', cursive;
   font-size: 18px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -79,11 +82,22 @@ nav {
 }
 
 
-.explore {
-  max-width: 100%;
-  // max-height: 20%;
+.explore_div {
+    position: relative;
+    text-align: center;
+    color: white; font-size: 50px;
 }
 
+.explore {
+  max-width: 100%;
+  max-height: 100%;
+}
+.show_tag_center_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .logo{
   font-family: 'Orbitron', sans-serif;
