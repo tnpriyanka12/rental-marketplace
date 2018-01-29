@@ -40,21 +40,41 @@ class BookingsController < ApplicationController
       prev_checkout_date = Date.parse(cb[:check_out])
       prev_booking_arr = (prev_checkin_date..prev_checkout_date).to_a
 
-      # check if previous bookings' dates have common dates with previous bookings
-      if (curr_booking_arr & prev_booking_arr).length == 0
+      # puts "curr ==========================================="
+      # p curr_checkin_date
+      # p curr_checkout_date
+      # puts "==========================================="
+      # p curr_booking_arr
+      # puts "==========================================="
+      #
+      #
+      # puts "prev ==========================================="
+      # p prev_checkin_date
+      # p prev_checkout_date
+      # puts "==========================================="
+      # p prev_booking_arr
+      # puts "==========================================="
+      # puts "==========================================="
+      # p (curr_booking_arr & prev_booking_arr)
 
-      # raise 'hell'
+
+      # check if previous bookings' dates have common dates with previous bookings
+      if (curr_booking_arr & prev_booking_arr).length > 0
+        # error -> Dates co-incides with previous booking
+        flash[:error] = "Dates co-incides with previous booking"
+        # Redirect to booking form AND return, which exits loop
+        redirect_to new_property_booking_path and return
+      end
+
+    end # .each
+
+      # If we didn't redirect to the error page before now (in the each loop),
+      # it's safe to add the booking, i.e. no overlap
       # valid bookings - create the property
       b = property.bookings.create booking_params
       @current_user.bookings << b
-      redirect_to property_path property and return
-      else
+      redirect_to property_path property #and return
 
-      # error -> Dates co-incides with previous booking
-      flash[:error] = "Dates co-incides with previous booking"
-      redirect_to new_property_booking_path and return
-      end
-    end # .each
     end
   end # if - else
 
