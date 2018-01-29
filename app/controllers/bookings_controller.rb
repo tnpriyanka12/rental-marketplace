@@ -40,24 +40,6 @@ class BookingsController < ApplicationController
       prev_checkout_date = Date.parse(cb[:check_out])
       prev_booking_arr = (prev_checkin_date..prev_checkout_date).to_a
 
-      # puts "curr ==========================================="
-      # p curr_checkin_date
-      # p curr_checkout_date
-      # puts "==========================================="
-      # p curr_booking_arr
-      # puts "==========================================="
-      #
-      #
-      # puts "prev ==========================================="
-      # p prev_checkin_date
-      # p prev_checkout_date
-      # puts "==========================================="
-      # p prev_booking_arr
-      # puts "==========================================="
-      # puts "==========================================="
-      # p (curr_booking_arr & prev_booking_arr)
-
-
       # check if previous bookings' dates have common dates with previous bookings
       if (curr_booking_arr & prev_booking_arr).length > 0
         # error -> Dates co-incides with previous booking
