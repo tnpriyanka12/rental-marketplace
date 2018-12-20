@@ -8,8 +8,8 @@ Things you may want to cover:
 * Ruby version - ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin17]
 
 * Live Site Address -  https://rental-marketplace.herokuapp.com/ /
-![sample-pic_1](/hh.JPG)
-![sample_pic_2](/hh1.JPG)
+![sample-pic_1](/hh.JPG =50x50)
+![sample_pic_2](/hh2.JPG =50x50)
 
 * "Happy Homes" is a website for finding rentals all over Australia. You can sign up if you are a new user and login directly if you are an already existing user. Paypal payment options coming soon.
 Very user-friendly website .
